@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
 Coin.create!(
     description: "Testando"
     acronym: "TST"
