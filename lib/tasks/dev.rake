@@ -15,8 +15,9 @@ namespace :dev do
         puts %x(bundle exec rails db:migrate)
       end
 
-      puts %x(bundle exec rails dev:addcoins)
       puts %x(bundle exec rails dev:addtypes)
+      puts %x(bundle exec rails dev:addcoins)
+      
      
     else
       puts "Você não está no ambiente de desensolvimento!"
@@ -30,28 +31,33 @@ namespace :dev do
     coins = [
                 { description: "Testando",
                 acronym: 'TST',
-                url_image: "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png"
+                url_image: "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png",
+                mining_type: MiningType.all.sample
                 },
         
                 { description: "Bitcoin",
                 acronym: "BTC",
-                url_image: "https://www.pngall.com/wp-content/uploads/1/Bitcoin-PNG-Pic.png"
+                url_image: "https://www.pngall.com/wp-content/uploads/1/Bitcoin-PNG-Pic.png",
+                mining_type: MiningType.all.sample
                 },
         
                 { description: "Dash",
                 acronym: "DASH",
-                url_image: "https://www.shareicon.net/data/2016/07/08/117431_dash_512x512.png"
+                url_image: "https://www.shareicon.net/data/2016/07/08/117431_dash_512x512.png",
+                mining_type: MiningType.all.sample
                 },   
                 
                 { description: "Iota",
                 acronym: "IOT",
-                url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/1720.png"
-              },
+                url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/1720.png",
+                mining_type: MiningType.all.sample
+                },
 
-              { description: "ZCash",
+                { description: "ZCash",
                 acronym: "ZEC",
-                url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/1437.png"
-              }
+                url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/1437.png",
+                mining_type: MiningType.all.sample
+                }
             ]
     
     coins.each do |coin|
@@ -65,9 +71,9 @@ namespace :dev do
    show_spinner("seed types DB") do
     
     mining_types = [
-         {name: "Proof of Work", acronym: "PoW"},
-         {name: "Proof of Stak", acronym: "PoS"},
-         {name: "Proof of Capacity", acronym: "PoC"}
+         {description: "Proof of Work", acronym: "PoW"},
+         {description: "Proof of Stak", acronym: "PoS"},
+         {description: "Proof of Capacity", acronym: "PoC"}
     ]
     
     mining_types.each do |mining_type|

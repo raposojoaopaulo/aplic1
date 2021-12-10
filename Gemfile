@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem "tty-spinner"
+gem "rspec"
+gem "dbconsole"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
