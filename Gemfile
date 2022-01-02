@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem "tty-spinner"
 gem "rspec"
 gem "dbconsole"
+gem 'i18n'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

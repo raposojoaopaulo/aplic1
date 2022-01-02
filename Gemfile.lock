@@ -226,6 +226,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   dbconsole
+  i18n
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
